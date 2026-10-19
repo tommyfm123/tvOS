@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/wallpaper_sharp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wallpaper_sharp" />
+
+        <ImageView
+            android:id="@+id/wallpaper_blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scrim" />
+
+        <FrameLayout
+            android:id="@+id/section_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/home_shelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/home_shelf_margin_start"
+                android:layout_marginTop="@dimen/home_shelf_margin_top"
+                android:orientation="vertical">
+
+                <TextClock
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:format12Hour="HH:mm"
+                    android:format24Hour="HH:mm"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowRadius="16"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/home_time_text_size" />
+
+                <TextClock
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:format12Hour="EEEE, d 'de' MMMM"
+                    android:format24Hour="EEEE, d 'de' MMMM"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowRadius="12"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/home_date_text_size" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/home_row_margin_bottom"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/row_padding_horizontal"
+                android:paddingVertical="@dimen/row_padding_vertical" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/section_apps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/apps_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/grid_padding_horizontal"
+                android:paddingTop="@dimen/grid_padding_top"
+                android:paddingBottom="@dimen/row_padding_vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scroll_edge_height"
+                android:background="@drawable/scroll_edge_top" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settings_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/settings_padding_horizontal"
+            android:paddingVertical="@dimen/row_padding_vertical"
+            android:visibility="gone" />
+
+        <dev.tommy.tvlauncher.GlassTabBar
+            android:id="@+id/tab_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="@dimen/tab_bar_margin_top" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/menu_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menu_scrim"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <dev.tommy.tvlauncher.GlassFrameLayout
+            android:id="@+id/menu_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/menu_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/menu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/menu_row_padding"
+                    android:paddingBottom="@dimen/menu_title_padding_bottom"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/menu_title_text_size" />
+
+                <EditText
+                    android:id="@+id/menu_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_row_height"
+                    android:background="@drawable/input_field"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:minWidth="@dimen/menu_min_width"
+                    android:paddingHorizontal="@dimen/menu_row_padding"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/menu_text_size"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/menu_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <FrameLayout
+                        android:id="@+id/menu_stack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/menu_actions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/menu_min_width"
+                            android:orientation="vertical" />
+                    </FrameLayout>
+                </ScrollView>
+            </LinearLayout>
+        </dev.tommy.tvlauncher.GlassFrameLayout>
+    </FrameLayout>
+</FrameLayout>

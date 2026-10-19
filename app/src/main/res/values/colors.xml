@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tile_fill">#2C2C2E</color>
+    <color name="tile_border">#59D1D5DB</color>
+    <color name="tile_banner_fill">#121214</color>
+    <color name="card_fill_start">#2EFFFFFF</color>
+    <color name="card_fill_end">#0FFFFFFF</color>
+    <color name="card_fill_focused_start">#52FFFFFF</color>
+    <color name="card_fill_focused_end">#26FFFFFF</color>
+    <color name="card_border_focused">#80FFFFFF</color>
+    <color name="label_chip">#E61C1C1E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#CCFFFFFF</color>
+    <color name="text_shadow">#66000000</color>
+    <color name="glass_tint">#33101014</color>
+    <color name="glass_border">#40FFFFFF</color>
+    <color name="selector_fill">#2EFFFFFF</color>
+    <color name="input_fill">#1FFFFFFF</color>
+    <color name="menu_scrim">#8C000000</color>
+    <color name="menu_destructive">#FF453A</color>
+    <color name="scrim_top">#33000000</color>
+    <color name="scrim_bottom">#A6000000</color>
+    <color name="scroll_edge_start">#CC000000</color>
+    <color name="scroll_edge_end">#00000000</color>
+</resources>

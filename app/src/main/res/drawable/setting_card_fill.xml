@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="150"
+    android:exitFadeDuration="150">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/card_fill_focused_end"
+                android:startColor="@color/card_fill_focused_start" />
+            <corners android:radius="@dimen/setting_card_corner" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/card_fill_end"
+                android:startColor="@color/card_fill_start" />
+            <corners android:radius="@dimen/setting_card_corner" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TvOS</string>
+    <string name="tab_home">Inicio</string>
+    <string name="tab_apps">Apps</string>
+    <string name="tab_settings">Ajustes</string>
+    <string name="shortcut_network">Red</string>
+    <string name="shortcut_picture">Imagen</string>
+    <string name="shortcut_startup">Inicio al encender</string>
+    <string name="shortcut_hidden">Elementos ocultos</string>
+    <string name="shortcut_all_settings">Todos los ajustes</string>
+    <string name="port_label">HDMI %1$d</string>
+    <string name="menu_open">Abrir</string>
+    <string name="menu_move_left">Mover a la izquierda</string>
+    <string name="menu_move_right">Mover a la derecha</string>
+    <string name="menu_change_image">Cambiar imagen</string>
+    <string name="menu_hide">Ocultar</string>
+    <string name="menu_info">Información de la app</string>
+    <string name="menu_uninstall">Desinstalar</string>
+    <string name="art_title">Imagen de %1$s</string>
+    <string name="art_default">Predeterminada</string>
+    <string name="art_playstation">PlayStation</string>
+    <string name="art_xbox">Xbox</string>
+    <string name="art_hbo_max">HBO Max</string>
+    <string name="art_spotify">Spotify</string>
+    <string name="art_netflix">Netflix</string>
+    <string name="menu_rename">Cambiar nombre</string>
+    <string name="rename_title">Nombre</string>
+    <string name="hidden_title">Mostrar de nuevo</string>
+    <string name="hidden_empty">No hay elementos ocultos</string>
+    <string name="launch_error">No se pudo abrir</string>
+</resources>
