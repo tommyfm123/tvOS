@@ -1,8 +1,28 @@
-# tvOS
+<p align="center">
+  <img src="docs/logo.png" alt="tvOS" width="140" height="140">
+</p>
 
-Launcher personalizado para **Android TV**, con una interfaz de vidrio inspirada en Apple TV: pill de secciones, desenfoque, animaciones suaves y personalización total de cada tile.
+<h1 align="center">tvOS</h1>
 
-Escrito en Kotlin con Views nativas, sin Compose ni librerías pesadas. El APK de release pesa menos de 1 MB y funciona fluido en hardware modesto (probado en una tele con 2 GB de RAM y CPU de 32 bits).
+<p align="center">
+  <strong>Un launcher de vidrio para tu Android TV.</strong><br>
+  Nativo, liviano y totalmente personalizable, con el estilo de Apple TV.
+</p>
+
+<p align="center">
+  <img alt="Android TV 9+" src="https://img.shields.io/badge/Android%20TV-9%2B-3DDC84?logo=android&logoColor=white">
+  <img alt="Kotlin 2" src="https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white">
+  <img alt="XML Views" src="https://img.shields.io/badge/UI-XML%20Views-0A84FF">
+  <img alt="Gradle Kotlin DSL" src="https://img.shields.io/badge/Gradle-Kotlin%20DSL-02303A?logo=gradle&logoColor=white">
+  <img alt="JDK 17" src="https://img.shields.io/badge/JDK-17-ED8B00?logo=openjdk&logoColor=white">
+  <img alt="APK menor a 1 MB" src="https://img.shields.io/badge/APK-%3C%201%20MB-34C759">
+</p>
+
+---
+
+Launcher personalizado para **Android TV** con una interfaz de vidrio inspirada en Apple TV: pill de secciones, desenfoque, animaciones suaves y personalización total de cada tile.
+
+Escrito en **Kotlin** con **Views nativas en XML**, sin Compose ni librerías pesadas. El APK de release pesa menos de 1 MB y funciona fluido en hardware modesto (probado en una tele con 2 GB de RAM y CPU de 32 bits).
 
 <p align="center">
   <img src="docs/screenshots/home.jpg" alt="Pantalla de inicio" width="49%">
@@ -33,6 +53,16 @@ Escrito en Kotlin con Views nativas, sin Compose ni librerías pesadas. El APK d
 - Los elementos ocultos se restauran desde **Ajustes → Elementos ocultos**.
 - Imágenes incluidas para PlayStation, Xbox, HBO Max, Spotify y Netflix. HBO Max, Spotify y Netflix se aplican automáticamente a su app.
 - Imágenes propias: cualquier PNG, JPG o WebP que copies a la carpeta de arte aparece en **Cambiar imagen** (ver [Imágenes propias](#imágenes-propias)).
+
+## Stack
+
+| | |
+|---|---|
+| Lenguajes | **Kotlin** (lógica y UI), **XML** (layouts y recursos), **Kotlin DSL** (Gradle) |
+| UI | Views nativas con `RecyclerView`. Sin Compose |
+| Dependencias | Solo `androidx.recyclerview` |
+| Build | Gradle 8.14, Android Gradle Plugin 8.7, Kotlin 2.0 |
+| SDK | `minSdk` 28, `targetSdk` 34, `compileSdk` 35 |
 
 ## Requisitos
 
